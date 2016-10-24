@@ -1,2 +1,2 @@
 # v2ray-docker
-I'm lazy
+I'm lazy.
