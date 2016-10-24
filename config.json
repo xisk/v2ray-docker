@@ -1,0 +1,80 @@
+{
+    "log": {
+        "access": "/dev/null",
+        "error": "/dev/null",
+        "loglevel": "none"
+    },
+    "inbound": {
+        "port": 443,
+        "protocol": "vmess",
+        "settings": {
+            "clients": [
+                {
+                    "id": "67a7ac7f-3656-a5f3-3434-a3faaa744770",
+                    "level": 1,
+                    "alterId": 64
+                }
+            ]
+        }
+    },
+    "outbound": {
+        "protocol": "freedom",
+        "settings": {}
+    },
+    "inboundDetour": [
+        {
+            "protocol": "shadowsocks",
+            "port": 80,
+            "settings": {
+                "method": "aes-256-cfb",
+                "password": "67a7ac7f-3656-a5f3-3434-a3faaa744770",
+                "udp": true
+            }
+        }
+    ],
+    "outboundDetour": [
+        {
+            "protocol": "blackhole",
+            "settings": {},
+            "tag": "blocked"
+        }
+    ],
+    "routing": {
+        "strategy": "rules",
+        "settings": {
+            "rules": [
+                {
+                    "type": "field",
+                    "ip": [
+                        "0.0.0.0/8",
+                        "10.0.0.0/8",
+                        "100.64.0.0/10",
+                        "127.0.0.0/8",
+                        "169.254.0.0/16",
+                        "172.16.0.0/12",
+                        "192.0.0.0/24",
+                        "192.0.2.0/24",
+                        "192.168.0.0/16",
+                        "198.18.0.0/15",
+                        "198.51.100.0/24",
+                        "203.0.113.0/24",
+                        "::1/128",
+                        "fc00::/7",
+                        "fe80::/10"
+                    ],
+                    "outboundTag": "blocked"
+                }
+            ]
+        }
+    },
+    "transport": {
+        "kcpSettings": {
+            "uplinkCapacity": 50,
+            "downlinkCapacity": 50,
+            "congestion": true,
+            "header": {
+                "type": "none"
+            }
+        }
+    }
+}
