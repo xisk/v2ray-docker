@@ -8,10 +8,10 @@ RUN apt update -qq \
     && apt install git curl unzip wget -y -q
 
 # Port for v2ray
-EXPOSE 443
+EXPOSE 10010
 
 # Port for ShadowSocks
-EXPOSE 80
+EXPOSE 10086
 
 # Setup V2Ray
 RUN curl -L -s https://raw.githubusercontent.com/v2ray/v2ray-core/master/release/install-release.sh | bash

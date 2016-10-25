@@ -5,7 +5,7 @@
         "loglevel": "none"
     },
     "inbound": {
-        "port": 443,
+        "port": 10010,
         "protocol": "vmess",
         "settings": {
             "clients": [
@@ -24,7 +24,7 @@
     "inboundDetour": [
         {
             "protocol": "shadowsocks",
-            "port": 80,
+            "port": 10086,
             "settings": {
                 "method": "aes-256-cfb",
                 "password": "67a7ac7f-3656-a5f3-3434-a3faaa744770",
