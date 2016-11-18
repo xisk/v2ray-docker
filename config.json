@@ -1,8 +1,7 @@
 {
     "log": {
         "access": "/dev/null",
-        "error": "/dev/null",
-        "loglevel": "none"
+        "loglevel": "warning"
     },
     "inbound": {
         "port": 10010,
