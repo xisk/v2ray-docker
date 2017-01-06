@@ -18,4 +18,4 @@ ADD config.json /etc/v2ray/config.json
 ADD run.sh /etc/v2ray/run.sh
 
 # Have fun
-ENTRYPOINT ["/bin/bash", "/usr/bin/v2ray/run.sh"]
+ENTRYPOINT ["/bin/bash", "/etc/v2ray/run.sh"]
