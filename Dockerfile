@@ -5,7 +5,7 @@ MAINTAINER "jinyu121" <jinyu121@126.com>
 RUN echo "Asia/Shanghai" > /etc/timezone
 RUN apt update \
     && apt upgrade -y \
-    && apt install git curl unzip wget -y
+    && apt install git curl unzip wget iperf3 -y
 
 # Port for v2ray
 EXPOSE 10010
