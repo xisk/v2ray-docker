@@ -9,5 +9,5 @@ if [ -n "$ENV_V2RAYCONFIG" ]; then
 fi
 
 # Run
-iperf3 -sD
+iperf3 -s
 /usr/bin/v2ray/v2ray -config /etc/v2ray/config.json
