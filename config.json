@@ -14,18 +14,7 @@
                     "alterId": 64
                 }
             ]
-        },
-        "streamSettings": {
-            "network": "kcp",
-            "kcpSettings": {
-                "uplinkCapacity": 50,
-                "downlinkCapacity": 50,
-                "congestion": true,
-                "header": {
-                    "type": "none"
-                }
-            }
-        },
+        }
     },
     "outbound": {
         "protocol": "freedom",
@@ -77,5 +66,14 @@
             ]
         }
     },
-    "transport": {}
+    "transport": {
+        "kcpSettings": {
+            "uplinkCapacity": 50,
+            "downlinkCapacity": 50,
+            "congestion": true,
+            "header": {
+                "type": "none"
+            }
+        }
+    }
 }
