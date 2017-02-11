@@ -4,9 +4,17 @@
 
 An out-of-the-box V2Ray Docker.
 
-## Custom Configuration
+## Configuration
 
-To use your own `config.json`, you should encode the config file with __base64__, and set the docker ENV `ENV_V2RAYCONFIG`.
+### Server
+
+To use your own `config.json`, you should encode the config file with __base64__, and set the encoded string to docker ENV `ENV_V2RAYCONFIG`.
+
+### Client
+
+You can use `tools/UpdateArukas.py` to update nodes info.
+
+We use dict `config` in `tools/UpdateArukas.py` as the model of `config.json`.
 
 ## Ports
 
